@@ -25,7 +25,7 @@ const DogList = (props) => {
   }
 
   return (
-     <div>
+     <div className="search">
             <input type="text" list="data" value={searchValue} onChange={handleSearchInputChanges} />
             <datalist id="data">
             {props.list.map((item, key) =>
@@ -33,7 +33,7 @@ const DogList = (props) => {
             )}
             </datalist>
             <input onClick={callSearchFunction} type="submit" value="ADD" />
-            <input onClick={callRandomSearchFunction} type="submit" value="ADD RANDOM" />
+            <input onClick={callRandomSearchFunction} type="submit" value="RANDOM" />
      </div>
         
     );

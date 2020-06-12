@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import DogList from "./DogList";
 import MyList from "./MyList";
+import Header from "./Header";
 
 const App = () => {
     const [loading, setLoading] = useState(true);
@@ -75,8 +76,9 @@ const App = () => {
     
     return (
      <div className="App">
+       <Header text="Dog Search" />
        <DogList list={searchList} randomSearch={randomSearch} search={search} />
-      <div>
+      <div className="dogs">
         {loading && !errorMessage ? (
          <span>loading...</span>
          ) : errorMessage ? (

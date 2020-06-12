@@ -9,7 +9,7 @@ const MyList = ( {dog, deleteDog, i} ) => {
       }
    
     return (
-      <div>
+      <div className="dog">
         <h2>{dog[1]}</h2>
         <div>
           <img
