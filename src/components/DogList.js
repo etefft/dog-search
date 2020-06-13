@@ -14,8 +14,10 @@ const DogList = (props) => {
 
   const callSearchFunction = (e) => {
     e.preventDefault();
-    props.search(searchValue);
-    resetInputField();
+    if (searchValue != "") {
+      props.search(searchValue);
+      resetInputField();
+    }
   }
 
   const callRandomSearchFunction = (e) => {

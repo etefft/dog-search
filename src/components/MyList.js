@@ -18,7 +18,7 @@ const MyList = ( {dog, deleteDog, i} ) => {
             src={dog[2]}
           />
         </div>
-        <input name={i} type="button" value="DELETE" onClick={callFunction}/>
+        <input name={i} type="submit" value="DELETE" onClick={callFunction}/>
       </div>
     );
   };

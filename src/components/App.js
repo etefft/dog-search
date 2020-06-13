@@ -34,8 +34,9 @@ const App = () => {
           array.splice(index, 1);
           setSearchList(array);
         } else {
-          setErrorMessage(jsonResponse.status);
+          setErrorMessage("Dog doesn't exist. Try a dog from the drop down list");
           setLoading(false);
+          setMyDogs(myDogs)
         }
       });
     };
@@ -53,7 +54,9 @@ const App = () => {
           setMyDogs([...myDogs, [myDogs.length, randomDog , jsonResponse.message]]);
           setLoading(false);
           let array = [...searchList];
-          let index = array.indexOf(searchValue);
+          let index = array.indexOf(randomDog);
+          console.log(index);
+          
             array.splice(index, 1);
             setSearchList(array);
         } else {
